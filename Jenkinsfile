@@ -9,12 +9,12 @@ steps
 {
 git "https://github.com/udayakumar99/jenkins_lin.git"
 }
+}
 stage("Run")
 {
 steps
 {
 sh demo.java 
-}
 }
 }
 }
