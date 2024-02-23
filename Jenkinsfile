@@ -14,7 +14,7 @@ stage("Run")
 {
 steps
 {
-sh demo.java 
+java demo.java 
 }
 }
 }
