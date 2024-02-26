@@ -1,8 +1,23 @@
-Node
+pipeline
 {
-  stage ("git")
+  agent any
+  stages
   {
-    git "https://github.com/udayakumar99/jenkins_lin.git"
-    sh "java demo.java"
+    stage("GIT")
+    {
+      steps
+      {
+        git "https://github.com/udayakumar99/jenkins_lin.git"
+      }
+    }
+    stage("Run")
+    {
+      steps
+      {
+        "javac demo.java"
+        "java demo.java"
+      }
+    }
   }
 }
+
