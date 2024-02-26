@@ -7,15 +7,17 @@ pipeline
     {
       steps
       {
-        git 'https://github.com/udayakumar99/jenkins_lin.git'
+        git 'https://github.com/SreekanthJaladanki/sample_maven_project.git'
       }
     }
     stage("Run")
     {
       steps
       {
-        "javac Demo.java"
-        "java Demo.java"
+        "mvn clean"
+        "validate"
+        "mvn compile"
+        "mvn test"
       }
     }
   }
